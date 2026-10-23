@@ -1,0 +1,36 @@
+STACJE PALIW NL / BE — APLIKACJA NAPISANA OD PODSTAW
+
+Dane: 149 rekordów ze źródłowego CSV.
+Kraje na podstawie adresu: Belgia 39, Holandia 110, nieustalone 0.
+
+CO ROBI:
+- nie wymaga wpisywania adresu przy każdym otwarciu po dodaniu ikony do ekranu,
+- pyta o zgodę na lokalizację i pobiera GPS,
+- wyszukuje współrzędne stacji online i zapisuje je lokalnie,
+- sortuje stacje po odległości od użytkownika,
+- otwiera nawigację w Google Maps,
+- ma wyszukiwarkę, filtry kraju i ulubione,
+- zapisuje interfejs i listę stacji do użytku offline po pierwszym otwarciu.
+
+WAŻNE OGRANICZENIA:
+- iPhone nie pozwala aplikacji internetowej przyznać sobie uprawnień; użytkownik musi raz wyrazić zgodę.
+- Aby działać jako ikona aplikacji z GPS, PWA musi być hostowana pod HTTPS. Nie da się ominąć adresu przy pierwszej instalacji; po dodaniu ikony nie trzeba go wpisywać przy każdym uruchomieniu.
+- To PWA, a nie natywna aplikacja z App Store.
+- Współrzędne geokodowane są przez publiczną usługę Nominatim/OpenStreetMap, z limitem zapytań około jednego na sekundę. Pierwsze ustalenie pozycji dla 149 stacji może trwać kilka minut; postęp jest widoczny i zapisuje się stopniowo. Publiczna usługa może czasowo ograniczyć żądania.
+- Pozycja użytkownika jest pobierana tylko po dotknięciu przycisku.
+- Google Maps, geokodowanie i internetowe mapy wymagają internetu.
+- Brak aktualnych cen paliw, bo źródłowe dane ich nie zawierają i nie podłączono API cen.
+
+PUBLIKACJA Z IPHONE’A:
+1. Rozpakuj ZIP w aplikacji Pliki.
+2. W Safari zaloguj się do GitHub.com (darmowe konto).
+3. Utwórz publiczne repozytorium `mapa-stacji-nl-be`.
+4. Prześlij zawartość folderu do głównego katalogu repozytorium; zachowaj folder `icons`.
+5. Commit changes.
+6. Settings → Pages → Deploy from a branch → `main` → `/(root)` → Save.
+7. Otwórz dokładny adres Pages pokazany przez GitHub w Safari.
+8. Udostępnij → Dodaj do ekranu początkowego → Dodaj.
+9. Uruchom ikonę online przynajmniej raz, a następnie naciśnij „Znajdź blisko mnie” i zaakceptuj lokalizację.
+10. Przy pierwszym geokodowaniu pozostaw aplikację otwartą, jeśli chcesz zapisać współrzędne wszystkich stacji. Możesz przerwać — już zapisane współrzędne zostaną zachowane.
+
+Nie podawaj nikomu hasła do GitHub. Nie ma potrzeby kupowania domeny ani płatnego planu.

@@ -1,0 +1,20 @@
+{
+  "name": "Stacje paliw NL / BE",
+  "short_name": "Stacje NL-BE",
+  "description": "Znajdź stacje paliw, policz odległość i nawiguj.",
+  "lang": "pl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#07111e",
+  "theme_color": "#07111e",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
